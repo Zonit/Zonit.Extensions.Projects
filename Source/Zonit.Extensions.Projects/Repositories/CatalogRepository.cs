@@ -18,7 +18,7 @@ internal class CatalogRepository(
 
     public async Task<StateModel> InicjalizeAsync()
     {
-        return new StateModel
+        return _state = new StateModel
         {
             Catalog = await _organizationProject.InicjalizeAsync(),
             Projects = await _organizationProject.GetProjectsAsync()
