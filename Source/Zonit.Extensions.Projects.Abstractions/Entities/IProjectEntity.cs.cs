@@ -13,5 +13,5 @@ public interface IProjectEntity
     /// <summary>
     /// Project Model
     /// </summary>
-    public ProjectModel? Project { get; set; }
+    public ProjectModel? Project { get; init; }
 }
