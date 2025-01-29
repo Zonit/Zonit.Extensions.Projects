@@ -1,11 +1,13 @@
 <Project>
 	<PropertyGroup>
-		<!--<PublishAot>true</PublishAot>
-		<IsAotCompatible>true</IsAotCompatible>-->
-		<TargetFramework>net8.0</TargetFramework>
+		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+		<TargetFrameworks>net8.0;net9.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<AssemblyVersion>0.1.3</AssemblyVersion>
+		<AssemblyVersion>0.1.4</AssemblyVersion>
+
+		<!--<PublishAot>true</PublishAot>
+		<IsAotCompatible>true</IsAotCompatible>-->
 		
 		<!-- Package info -->
 		<FileVersion>$(AssemblyVersion)</FileVersion>
@@ -22,8 +24,14 @@
 		<IncludeSource>true</IncludeSource>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	</PropertyGroup>
-	<ItemGroup>
-		<PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
-		<PackageVersion Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+		<PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
+		<PackageVersion Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
+		<PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.1" />
+		<PackageVersion Include="Microsoft.Extensions.Hosting" Version="9.0.1" />
 	</ItemGroup>
 </Project>
