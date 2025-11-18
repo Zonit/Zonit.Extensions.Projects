@@ -3,7 +3,7 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyVersion>0.1.4</AssemblyVersion>
+    <AssemblyVersion>0.1.50</AssemblyVersion>
     <!--<PublishAot>true</PublishAot>
 		<IsAotCompatible>true</IsAotCompatible>-->
     <!-- Package info -->
